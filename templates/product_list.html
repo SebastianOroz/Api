@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul>
+        {% for product in products %}
+            <li>
+                <strong>{{ product.name }}</strong> - ${{ product.price }}<br>
+                {{ product.description }}<br>
+                <a href="/api/products/{{ product.id }}/">Ver Detalles</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
